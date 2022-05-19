@@ -1,0 +1,59 @@
+body{
+    transition: 1s;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+/*This body styling transitions from dark mode to light*/
+/*Creating the toggle button*/
+.switch{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    position: relative;
+}
+
+.flicker{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 1s;
+    box-shadow:
+     inset 4px 4px 4px white,
+     inset -4px -4px 4px gray;
+}
+
+.dark{
+    background-color: rgb(70, 70, 70);
+    transition: 1s;
+}
+
+.dark .flicker{
+    transform: translateX(40px);
+    background-color: white;
+}
+
+
+/*Use position relative for the parent and use position absolute to make the object
+relative to the specific parent*/
+
+/*The box shadow inset creates a rounded shadow*/
+
+
+.main{
+    height: 80vh;
+}
+
+.main-text{
+    width: 50%;
+    padding: 30px;
+}
